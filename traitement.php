@@ -1,31 +1,46 @@
-<link rel="stylesheet" href="styles.scss">
+<link rel="stylesheet" href="article.css">
 
 <?php
 
 session_start();
 require_once("db.php");
 
+
+include "nav.php";
+
+
 $search = $_GET['Rechercher'];
 
 $sql = "select * from fruitslegumes where  Nom like'" . $search . "%'";
 $result = mysqli_query($mysqli, $sql);
-var_dump($search);
+/*var_dump($search);*/
+?>
 
+<div class="article">
 
+<?php
 while ($row = mysqli_fetch_array($result)){
     $id = $row["ID_FL"];
 ?>
 
-<div class="fidget">
+        <div class="articles">
+            <a href="product.php?id=<?php echo $id ?>"><img class="articles_img" src="<?= $row["Image"]; ?>"></a>
+            <div class="article_name">
+                <a href="product.php?id=<?php echo $id ?>"><h1><?php echo $row['Nom']; ?></h1></a>
+                <p class="articles_provenance">
+                    Provenance : <?= $row["Provenance"]; ?></p>
+                <p class="articles_achat">
+                    <?= $row["Prix"];?> € / <?= $row["Quantite"];?><br/><br/>
+                    <?= $row["Description"];?>
 
-    <a href="product.php?id=<?php echo $id ?>"><h1>Produit : <?php echo $row['Nom']; ?></h1></a>
-
-<?php echo $row['Quantite']; ?> <br/>
-<?php echo $row['Prix']; ?> <br/>
-<?php echo $row['Provenance']; ?> <br/>
-<?php echo $row['Conservation']; ?> <br/>
-<?php echo $row['Description']; ?> <br/>
+                </p>
+            </div>
+        </div>
 <?php
 }
 ?>
 </div>
+<?php
+include "footer.php";
+?>
+

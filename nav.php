@@ -3,11 +3,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE  =edge">
     <link rel="stylesheet" href="styles.css">
+
     <script src="https://kit.fontawesome.com/db2bf29261.js" crossorigin="anonymous"></script>
 
 </head>
 
-<nav class="navbar">
+<nav class="navbar" style="height: 50px !important;">
 
 
     <div>
@@ -49,12 +50,11 @@
             <span style="cursor: pointer;" onclick='sendad()'><i class="fa-solid fa-magnifying-glass"></i></span>
         </span>
 
-            <a href="panier.php" class="item"><i class="fa-solid fa-basket-shopping"></i></a>
+            <a href="/" class="item"><i class="fa-solid fa-basket-shopping"></i></a>
 
             <a href="login.php" class="log">Connexion <i class="fa-solid fa-arrow-right-to-bracket"></i> </a>
 
     </span>
-
 
 
 
@@ -74,4 +74,37 @@
         }
     </script>
 
+    <div class="navbar__toggle" onclick="openOrClose()" id="mobile-menu">
+        <div class="tirait">
+            <span class="tirait_sous"></span>
+            <span class="tirait_sous"></span>
+            <span class="tirait_sous"></span>
+        </div>
+    </div>
 </nav>
+<ul class="navbar_container2">
+    <li class="services2"><a href="#" title="" class="type2">Fruits</a>
+        <ul class="sous-menu2">
+            <li><a href="#" title="" class="type_sous2">Fruits à noyaux</a></li>
+            <li><a href="#" title="" class="type_sous2">Fruits à pépins</a></li>
+            <li><a href="#" title="" class="type_sous2">Baies et fruits rouges</a></li>
+            <li><a href="#" title="" class="type_sous2">Agrumes</a></li>
+            <li><a href="#" title="" class="type_sous2">Fruits à coque</a></li>
+            <li><a href="#" title="" class="type_sous2">Fruits exotiques</a></li>
+        </ul>
+    <li class="services2"><a href="#" title="" class="type2">Légumes</a>
+        <ul class="sous-menu2">
+            <li><a href="#" title="" class="type_sous2">Légumes fleurs</a></li>
+            <li><a href="#" title="" class="type_sous2">Graines</a></li>
+            <li><a href="#" title="" class="type_sous2">Légumes feuilles</a></li>
+            <li><a href="#" title="" class="type_sous2">Légumes fruits</a></li>
+            <li><a href="#" title="" class="type_sous2">Racine</a></li>
+            <li><a href="#" title="" class="type_sous2">Légumes à bulbe</a></li>
+            <li><a href="#" title="" class="type_sous2">Légumes tubercules</a></li>
+            <li><a href="#" title="" class="type_sous2">Légumes tiges</a></li>
+        </ul>
+
+</ul>
+
+<script src="app.js"></script>
+

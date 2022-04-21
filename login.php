@@ -5,6 +5,7 @@
     <title>Connexion</title>
     <link href="longin.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/db2bf29261.js" crossorigin="anonymous"></script>
+    <a href="index.php">Accueil</a>
 </head>
 <body>
 
@@ -25,5 +26,6 @@
         </div>
     </form>
 </div>
+
 </body>
 </html>
