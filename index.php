@@ -43,6 +43,7 @@ include "nav.php";
 </div>
 
 <script>
+
     let slideIndex = 0;
     showSlides();
 

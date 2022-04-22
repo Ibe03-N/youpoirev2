@@ -24,9 +24,9 @@ while ($row = mysqli_fetch_array($result)){
 ?>
 
         <div class="articles">
-            <a href="product.php?id=<?php echo $id ?>"><img class="articles_img" src="<?= $row["Image"]; ?>"></a>
+            <a href="productdetail.php?id=<?php echo $id ?>"><img class="articles_img" src="<?= $row["Image"]; ?>"></a>
             <div class="article_name">
-                <a href="product.php?id=<?php echo $id ?>"><h1><?php echo $row['Nom']; ?></h1></a>
+                <a href="productdetail.php?id=<?php echo $id ?>"><h1><?php echo $row['Nom']; ?></h1></a>
                 <p class="articles_provenance">
                     Provenance : <?= $row["Provenance"]; ?></p>
                 <p class="articles_achat">
