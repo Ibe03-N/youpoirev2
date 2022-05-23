@@ -24,6 +24,7 @@ $mdp = addslashes($mdp);
     $sql = "SELECT * FROM utilisateurs WHERE Mail = '" . $mail . "'";
     $result = $mysqli->query($sql);
     $res = mysqli_num_rows($result);
+
 if ($res == 1)
 {
     $row = mysqli_fetch_array($result);
@@ -44,5 +45,9 @@ if ($res == 1)
 else
     echo "L'email ou le mot de passe est incorrect";
 ?>
+
+
+
+
 </body>
 </html>
