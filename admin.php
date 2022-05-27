@@ -8,9 +8,17 @@
 <body>
 
 <?php
-include "nav.php";
-?>
 
+session_start();
+
+include "nav.php";
+
+if ($_SESSION['ID'] != 6) {?>
+    <script>window.location.replace("index.php");</script> <?php
+}
+
+
+?>
 
 
 <h1>Page administrateur</h1>
@@ -21,7 +29,12 @@ include "nav.php";
 <div class="all">
     <a href="/" class="prout"><div>Ajouter un produit</div></a>
     <a href="/" class="prout"><div>Modifier un produit</div></a>
-    <a href="/" class="prout"><div>Gérer les utilisateurs</div></a>
+    <a href="gerer.php" class="prout"><div>Gérer les utilisateurs</div></a>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 088d8df1f69fe8760d2225284afe4746c1cce375
+    
 </div>
 
 

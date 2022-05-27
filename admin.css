@@ -1,6 +1,6 @@
 .all{
     margin: 100px;
-    background-color: green;
+    box-shadow: 0 6px 10px rgba(0,0,0,.2);
     width: 400px;
 
     padding: 4px;
