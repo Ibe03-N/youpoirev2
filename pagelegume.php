@@ -15,6 +15,7 @@ require_once "db.php";
 
 
 <?php
+session_start();
 include "nav.php";
 ?>
 
