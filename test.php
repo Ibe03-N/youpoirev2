@@ -1,5 +1,6 @@
 <?php
 require_once "db.php";
+session_start();
 if(!isset($_SESSION['ID'])){
     header("Location:login.php");
 }
@@ -60,12 +61,12 @@ include('nav.php')
 <br> <br><br>
 <div style="margin-left : 100px; margin-right : 100px;">
 
-<h1 style="border-bottom : 1px solid black; padding-bottom:8px;">Panier</h1>
+<h1 style="border-bottom : 1px solid black; padding-bottom:8px; width : 500px;">Panier</h1>
 <br>
 
 
 
-    <div class="all">
+    <div class="all2">
         <!-- <div class="header">
 
             <div class="nom">Nom du produit</div>
@@ -78,7 +79,7 @@ include('nav.php')
             </div>
         </div> -->
 
-
+        <div>
         <?php
         $a = 0;
 
@@ -86,7 +87,7 @@ include('nav.php')
             $id = $row["ID_FL"];
         ?>
 <form id="frm<?php echo $id ?>">
-        <div class="produits">
+        <div class="produits2">
             <div style="display : flex;align-items : center;">
                 <a href="productdetail.php?id=<?php echo $id ?>"><img class="imgprod" src="<?= $row["Image"]; ?>"></a>
             <?= $row["Nom"]; ?></div>
@@ -134,17 +135,38 @@ include('nav.php')
         }
         ?>
         
-    </div>
-        <div class="total" id="totale" name="totalprice"></div>
-<br>
-        <div class="bas">
-            <a href="index.php"><div class="retour">Retour à l'accueil</div></a>
-                <div class="commande"><a href="validation.php"> Validation</a></div>
+    
         </div>
-        
-</div>
 
-<br>
+    <div class="recap">
+
+
+        <h1>Récapitulatif</h1>
+        <br>
+        <div><span class="total"> Sous-Total :</span> <span class="total" id="totale" name="totalprice"></span></div>
+        <br>
+        <div><input type="text" placeholder="code promo"></div>
+        <br>
+        <div> <span class="total"> Frais de port : </span></div>
+        <hr>
+        <div> <span class="total"> Total : </span></div>
+        <hr>
+
+        <button class="payer">Paiement</button>
+
+
+    </div>
+
+
+</div>
+<br><br>    
+
+
+
+    </div>
+        
+    </div>
+
 
 </body>
 </html>
